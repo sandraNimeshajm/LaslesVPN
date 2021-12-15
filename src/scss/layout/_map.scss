@@ -1,0 +1,51 @@
+.map {
+  margin-bottom: 60px;
+}
+
+.map__content-box {
+  max-width: 383px;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto 155px;
+
+  @include mq(550) {
+    margin: 0 auto 72px;
+  }
+
+  @include mq(400) {
+    margin: 0 auto 36px;
+  }
+}
+
+.map__content-box-title {
+  margin-bottom: 20px;
+}
+
+.map__img-box {
+  img {
+    max-width: 1080px;
+    width: 100%;
+    height: auto;
+  }
+}
+
+@include mq(1921, min) {
+  .map {
+    margin-bottom: 3.125vw;
+  }
+
+  .map__content-box {
+    max-width: 19.94792vw;
+    margin: 0 auto 8.07292vw;
+  }
+
+  .map__content-box-title {
+    margin-bottom: 1.04167vw;
+  }
+
+  .map__img-box {
+    img {
+      max-width: 56.25vw;
+    }
+  }
+}

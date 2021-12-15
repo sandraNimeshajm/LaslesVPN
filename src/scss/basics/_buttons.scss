@@ -1,0 +1,107 @@
+.btn {
+  @extend .rubik-18-medium;
+  display: inline-block;
+  transition: color 0.3s ease-out, transform 0.3s ease-out;
+  color: $black-1;
+
+  @include hover {
+    color: $red;
+    transform: translate3d(0, 4px, 0);
+  }
+
+  @include mq(550) {
+    font-size: 14px;
+  }
+}
+
+.btn--ghost {
+  padding: 13px 45px;
+  border: 1px solid $red;
+  border-radius: 50px;
+  color: $red;
+  transition: color 0.3s ease-out, background-color 0.3s ease-out,
+    transform 0.3s ease-out;
+
+  @include mq(1400) {
+    padding: 9px 24px;
+  }
+
+  @include hover {
+    color: $white;
+    background-color: $red;
+    transform: translate3d(0, 4px, 0);
+  }
+}
+
+.btn--full {
+  padding: 13px 45px;
+  border: 1px solid $red;
+  border-radius: 50px;
+  color: $white;
+  background-color: $red;
+  box-shadow: 0 20px 15px rgba($red-1, 0.35);
+  transition: color 0.3s ease-out, background-color 0.3s ease-out,
+    transform 0.3s ease-out, box-shadow 0.3s ease-out;
+
+  @include hover {
+    color: $red;
+    background-color: $white;
+    transform: translate3d(0, 4px, 0);
+    box-shadow: 0 12px 15px rgba($red-1, 0.8);
+  }
+}
+
+.btn--cta {
+  background-color: $red;
+  color: $white;
+  border-radius: 10px;
+  padding: 18px 78px;
+  box-shadow: 0 20px 15px rgba($red-1, 0.35);
+  transition: color 0.3s ease-out, background-color 0.3s ease-out,
+    transform 0.3s ease-out, border 0.3s ease-out, box-shadow 0.3s ease-out;
+
+  @include hover {
+    color: $red;
+    background-color: $white;
+    border: 1px solid $red;
+    transform: translate3d(0, 4px, 0);
+    box-shadow: 0 12px 15px rgba($red-1, 0.8);
+  }
+}
+
+@include mq(1921, min) {
+  .btn {
+    @include hover {
+      transform: translate3d(0, 0.20833vw, 0);
+    }
+  }
+
+  .btn--ghost {
+    padding: 0.67708vw 2.34375vw;
+    border: 0.05208vw solid $red;
+    border-radius: 2.60417vw;
+    @include hover {
+      transform: translate3d(0, 0.20833vw, 0);
+    }
+  }
+  .btn--full {
+    padding: 0.67708vw 2.34375vw;
+    border: 0.05208vw solid $red;
+    border-radius: 2.60417vw;
+    box-shadow: 0 1.04167vw 0.78125vw rgba($red-1, 0.35);
+    @include hover {
+      transform: translate3d(0, 0.20833vw, 0);
+      box-shadow: 0 0.625vw 0.78125vw rgba($red-1, 0.8);
+    }
+  }
+  .btn--cta {
+    border-radius: 0.52083vw;
+    padding: 0.9375vw 4.0625vw;
+    box-shadow: 0 1.04167vw 0.78125vw rgba($red-1, 0.35);
+    @include hover {
+      border: 0.05208vw solid $red;
+      transform: translate3d(0, 0.20833vw, 0);
+      box-shadow: 0 0.625vw 0.78125vw rgba($red-1, 0.8);
+    }
+  }
+}

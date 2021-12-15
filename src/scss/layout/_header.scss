@@ -1,0 +1,170 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 24px 0;
+  z-index: 99;
+  transition: background-color 0.3s, transform 0.3s;
+
+  &.sticky {
+    background-color: $white;
+  }
+
+  &.hide-on-scroll {
+    transform: translateY(-100%);
+  }
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include mq(1440) {
+    padding: 24px 50px;
+  }
+  @include mq(1200) {
+    padding: 24px;
+  }
+  @include mq(991) {
+    padding: 24px 15px;
+  }
+}
+
+.header__btn-box {
+  display: flex;
+  align-items: center;
+}
+
+.header__btn {
+  @extend .rubik-18-medium;
+  margin-right: 30px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include mq(1200) {
+    margin-right: 15px;
+  }
+}
+
+//hamburger menu
+.header__menu {
+  position: relative;
+  width: 44px;
+  height: 27px;
+  align-items: center;
+  cursor: pointer;
+  display: none;
+
+  @include mq(991) {
+    display: flex;
+    margin-left: auto;
+  }
+
+  @include mq(550) {
+    width: 32px;
+    height: 22px;
+  }
+}
+
+.js-menu {
+  &.active {
+    span {
+      transform: rotate(138deg);
+
+      &::before {
+        transform: rotate(-95deg);
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+.header__menu-line {
+  width: 100%;
+  height: 4px;
+  background-color: $red;
+  display: block;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    top: 0;
+    background-color: $red;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    bottom: 0;
+    background-color: $red;
+  }
+}
+
+.header__content {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+
+  @include mq(991) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 200vh;
+    position: absolute;
+    top: 0;
+    right: -180%;
+    padding: 90px;
+    background: $white-3;
+    transition: right 0.3s, width 0.3s;
+
+    @include mq(370) {
+      padding: 57px;
+    }
+  }
+
+  &.active {
+    right: 0;
+  }
+}
+
+.hidden {
+  opacity: 0;
+}
+
+@include mq(1921, min) {
+  .header {
+    padding: 1.25vw 0;
+  }
+
+  .header__btn {
+    margin-right: 1.5625vw;
+  }
+
+  .header__menu {
+    width: 2.29167vw;
+    height: 1.40625vw;
+  }
+
+  .header__menu-line {
+    height: 0.20833vw;
+
+    &::before {
+      height: 0.20833vw;
+    }
+
+    &::after {
+      height: 0.20833vw;
+    }
+  }
+}

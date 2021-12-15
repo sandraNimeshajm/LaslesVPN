@@ -1,0 +1,86 @@
+.nav {
+  margin-right: 150px;
+
+  @include mq(1530) {
+    margin-right: 75px;
+  }
+
+  @include mq(1450) {
+    margin-right: 64px;
+  }
+}
+
+.nav__list {
+  display: flex;
+
+  @include mq(991) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 64px;
+    transition: margin-right 0.3s;
+  }
+}
+
+.nav__list-item {
+  margin-right: 40px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include mq(1130) {
+    margin-right: 24px;
+  }
+
+  @include mq(991) {
+    margin-right: 0;
+    margin-bottom: 40px;
+    transition: margin-right 0.3s;
+  }
+}
+
+.nav__list-link {
+  @extend .rubik-20-normal;
+  color: $gray;
+  position: relative;
+  transition: color 0.3s ease-out;
+
+  @include hover {
+    color: $red;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: $red;
+    transition: width 0.3s ease-out;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+
+  @include mq(991) {
+    color: $black;
+  }
+}
+
+@include mq(1921, min) {
+  .nav {
+    margin-right: 7.8125vw;
+  }
+
+  .nav__list-item {
+    margin-right: 2.08333vw;
+  }
+
+  .nav__list-link {
+    &::after {
+      height: 0.15625vw;
+    }
+  }
+}

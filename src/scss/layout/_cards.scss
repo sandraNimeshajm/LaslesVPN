@@ -1,0 +1,160 @@
+.cards {
+  margin-bottom: 100px;
+}
+
+.cards__content-box {
+  text-align: center;
+  max-width: 550px;
+  width: 100%;
+  margin: 0 auto 60px;
+}
+
+.cards__content-box-title {
+  margin-bottom: 20px;
+}
+
+.cards__items {
+  display: flex;
+  justify-content: space-between;
+
+  @include mq(1100) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.cards__item {
+  display: flex;
+  flex-direction: column;
+  max-width: 330px;
+  width: 100%;
+  margin-right: 50px;
+  padding: 80px 54px 50px;
+  border: 2px solid $white-3;
+  border-radius: 10px;
+  background-color: $white;
+  text-align: center;
+  transition: border 0.3s ease;
+
+  @include mq(1100) {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include hover {
+    border: 2px solid $red;
+  }
+}
+
+.cards__item-img {
+  max-width: 144px;
+  height: 165px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+
+.cards__item-title {
+  @extend .rubik-20-medium;
+  margin-bottom: 30px;
+}
+
+.cards__item-list {
+  margin-bottom: 50px;
+
+  @include mq(1100) {
+    margin-bottom: 74px;
+  }
+
+  @include mq(500) {
+    margin-bottom: 60px;
+  }
+}
+
+.cards__item-list-item {
+  @extend .rubik-16-normal;
+  margin-bottom: 10px;
+  text-align: left;
+
+  &::before {
+    content: '\2713';
+    display: inline-block;
+    width: 13px;
+    height: 9px;
+    color: $green;
+    margin-right: 10px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.cards__item-price {
+  @extend .rubik-25-medium;
+  display: inline-block;
+  margin-top: auto;
+  margin-bottom: 20px;
+}
+
+.cards__item-btn {
+  @include mq(390) {
+    padding: 13px 20px;
+  }
+}
+
+@include mq(1921, min) {
+  .cards {
+    margin-bottom: 5.20833vw;
+  }
+
+  .cards__content-box {
+    max-width: 28.64583vw;
+    margin: 0 auto 3.125vw;
+  }
+
+  .cards__content-box-title {
+    margin-bottom: 1.04167vw;
+  }
+
+  .cards__item {
+    max-width: 17.1875vw;
+    margin-right: 2.60417vw;
+    padding: 4.16667vw 2.8125vw 2.60417vw;
+    border: 0.10417vw solid $white-3;
+    border-radius: 0.52083vw;
+  }
+
+  .cards__item-img {
+    margin-bottom: 1.5625vw;
+    max-width: 7.5vw;
+    height: 8.59375vw;
+  }
+
+  .cards__item-title {
+    margin-bottom: 1.5625vw;
+  }
+
+  .cards__item-list {
+    margin-bottom: 2.60417vw;
+  }
+
+  .cards__item-list-item {
+    margin-bottom: 0.52083vw;
+
+    &::before {
+      width: 0.67708vw;
+      height: 0.46875vw;
+      margin-right: 0.52083vw;
+    }
+  }
+
+  .cards__item-price {
+    margin-bottom: 1.04167vw;
+  }
+}

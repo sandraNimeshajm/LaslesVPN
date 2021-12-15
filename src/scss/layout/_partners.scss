@@ -1,0 +1,25 @@
+.partners {
+  margin-bottom: 100px;
+
+  .swiper-wrapper {
+    transition-timing-function: linear;
+  }
+}
+
+.partners__img {
+  width: 190px;
+  height: 60px;
+  object-fit: none;
+}
+
+@include mq(1921, min) {
+  .partners {
+    margin-bottom: 5.20833vw;
+  }
+
+  .partners__img {
+    width: 9.89583vw;
+    height: 3.125vw;
+    object-fit: cover;
+  }
+}

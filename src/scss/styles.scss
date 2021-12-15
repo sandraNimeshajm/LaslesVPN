@@ -1,0 +1,33 @@
+@import './aos/dist/aos';
+
+// TOOLS
+
+// HELPERS
+@import './helpers/reset';
+@import 'normalize.css/normalize';
+@import './helpers/mixins';
+@import './helpers/variables';
+@import 'swiper/swiper-bundle';
+
+// BASICS
+@import './basics/base';
+@import './basics/animations';
+@import './basics/buttons';
+@import './basics/fonts';
+@import './basics/links';
+@import './basics/typography';
+
+// LAYOUT
+@import './layout/banner';
+@import './layout/cards';
+@import './layout/cta';
+@import './layout/footer';
+@import './layout/header';
+@import './layout/img-text-box';
+@import './layout/map';
+@import './layout/partners';
+@import './layout/testimonials';
+@import './layout/counter';
+
+// MODULES
+@import './modules/nav';

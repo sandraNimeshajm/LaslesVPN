@@ -1,0 +1,191 @@
+@font-face {
+  font-family: 'Rubik';
+  src: url('./src/fonts/Rubik-Bold.woff2') format('woff2'),
+    url('./src/fonts/Rubik-Bold.woff') format('woff'),
+    url('./src/fonts/webfont.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('./src/fonts/Rubik-SemiBold.woff2') format('woff2'),
+    url('./src/fonts/Rubik-SemiBold.woff') format('woff'),
+    url('./src/fonts/webfont.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('./src/fonts/Rubik-Medium.woff2') format('woff2'),
+    url('./src/fonts/Rubik-Medium.woff') format('woff'),
+    url('./src/fonts/webfont.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('./src/fonts/Rubik-Regular.woff2') format('woff2'),
+    url('./src/fonts/Rubik-Regular.woff') format('woff'),
+    url('./src/fonts/webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('./src/fonts/Rubik-Light.woff2') format('woff2'),
+    url('./src/fonts/Rubik-Light.woff') format('woff'),
+    url('./src/fonts/webfont.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+.rubik-25-bold {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 25px;
+}
+
+.rubik-25-medium {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 25px;
+
+  @include mq(420) {
+    font-size: 20px;
+  }
+
+  @include mq(390) {
+    font-size: 16px;
+  }
+}
+
+.rubik-25-normal {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 25px;
+
+  @include mq(550) {
+    font-size: 20px;
+  }
+}
+
+.rubik-20-medium {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
+
+  @include mq(420) {
+    font-size: 18px;
+  }
+
+  @include mq(390) {
+    font-size: 16px;
+  }
+}
+
+.rubik-20-normal {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+
+  @include mq(991) {
+    color: $black;
+    font-size: 24px;
+  }
+
+  @include mq(430) {
+    font-size: 16px;
+  }
+}
+
+.rubik-18-medium {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 18px;
+
+  @include mq(991) {
+    font-size: 20px;
+  }
+
+  @include mq(560) {
+    font-size: 16px;
+  }
+}
+
+.rubik-18-normal {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+
+  @include mq(420) {
+    font-size: 16px;
+  }
+
+  @include mq(390) {
+    font-size: 14px;
+  }
+}
+
+.rubik-16-normal {
+  font-family: 'Rubik', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;
+
+  @include mq(1100) {
+    font-size: 14px;
+  }
+
+  @include mq(420) {
+    font-size: 14px;
+  }
+
+  @include mq(390) {
+    font-size: 12px;
+  }
+}
+
+@include mq(1921, min) {
+  .rubik-25-bold {
+    font-size: 1.30208vw;
+  }
+
+  .rubik-25-medium {
+    font-size: 1.30208vw;
+  }
+
+  .rubik-25-normal {
+    font-size: 1.30208vw;
+  }
+
+  .rubik-20-medium {
+    font-size: 1.04167vw;
+  }
+
+  .rubik-20-normal {
+    font-size: 1.04167vw;
+  }
+
+  .rubik-18-medium {
+    font-size: 0.9375vw;
+  }
+
+  .rubik-18-normal {
+    font-size: 0.9375vw;
+  }
+
+  .rubik-16-normal {
+    font-size: 0.83333vw;
+  }
+}

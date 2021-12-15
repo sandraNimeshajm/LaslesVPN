@@ -1,0 +1,55 @@
+{
+  "name": "lasles-vpn",
+  "author": "Sandra Nimeshajm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.babel.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development gulp dev",
+    "watch": "cross-env NODE_ENV=development gulp watch",
+    "prod": "cross-env NODE_ENV=production gulp prod"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "aos": "^3.0.0-beta.6",
+    "jquery": "^3.6.0",
+    "normalize.css": "^8.0.1",
+    "swiper": "^6.5.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/register": "^7.9.0",
+    "autoprefixer": "^9.7.6",
+    "babel-plugin-loop-optimizer": "^1.4.1",
+    "babelify": "^10.0.0",
+    "browser-sync": "^2.26.7",
+    "browserify": "^16.5.1",
+    "cross-env": "^7.0.2",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-import": "^2.20.2",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-eslint": "^6.0.0",
+    "gulp-if": "^3.0.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-lint": "^1.4.0",
+    "gulp-uglify": "^3.0.2",
+    "postcss-flexbugs-fixes": "^4.2.0",
+    "postcss-gap-properties": "^2.0.0",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  },
+  "babel": {
+    "presets": [
+      "@babel/env"
+    ]
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ]
+}
